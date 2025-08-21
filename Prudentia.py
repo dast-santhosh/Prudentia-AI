@@ -9,8 +9,8 @@ from streamlit_folium import st_folium
 try:
     OPENROUTER_API_KEY = st.secrets["OPENROUTER_API_KEY"]
     OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-    GUIDANCE_MODEL = "openai/gpt-oss-20b:free" #KERNEL USED AND BASE FOR THE DEVELOPMENT (AFTER DATA TRAINING)
-    PETITION_MODEL = "google/gemma-3n-e4b-it:free" #KERNEL (MULTI LANGUAGE MODEL) USED AND BASE FOR THE DEVELOPMENT (AFTER DATA TRAINING)
+    GUIDANCE_MODEL = "google/gemini-2.0-flash-exp:free" #KERNEL USED AND BASE FOR THE DEVELOPMENT (AFTER DATA TRAINING)
+    PETITION_MODEL = "google/gemini-2.0-flash-exp:free" #KERNEL (MULTI LANGUAGE MODEL) USED AND BASE FOR THE DEVELOPMENT (AFTER DATA TRAINING)
 
 except KeyError:
     st.error("API key not found. Please add your OPENROUTER_API_KEY to the secrets.toml file.")
@@ -542,4 +542,5 @@ def main():
 # --- 5. Main Execution Block ---
 if __name__ == "__main__":
     main()
+
 
